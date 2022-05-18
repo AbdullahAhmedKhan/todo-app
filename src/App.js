@@ -4,7 +4,8 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import RequireAuth from './Components/Login/RequireAuth';
 import Navbar from './Components/Navbar/Navbar';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,7 @@ function App() {
           </RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
-
+      <ToastContainer></ToastContainer>
 
 
 

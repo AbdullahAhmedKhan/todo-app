@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import Todo from './Todo';
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
             description: description
         }
         console.log(data);
-        const url = 'https://localhost:5000/todo';
+        const url = ' https://evening-island-96562.herokuapp.com/todo';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -23,7 +24,8 @@ const Home = () => {
             .then(result => {
                 console.log(result);
             })
-        // toast.success('Successfully Added');
+        toast.success('Successfully Added');
+        e.target.reset();
     }
     return (
         <div>
